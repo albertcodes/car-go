@@ -1,0 +1,17 @@
+<div class="logo">
+
+  <a class="simple-text logo-normal" href="javascript:void(0)">
+    <i class="tim-icons icon-double-right ml-2 mr-2"></i>
+    {{ getTitle() }}
+  </a>
+</div>
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{ menuItem.class }} nav-item">
+      <a [routerLink]="[menuItem.path]">
+        <i class="tim-icons  {{ menuItem.icon }}"></i>
+        <p>{{ menuItem.title }}</p>
+      </a>
+    </li>
+  </ul>
+</div>
