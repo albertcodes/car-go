@@ -15,15 +15,9 @@ export const ROUTES: RouteInfo[] = [
     class: ''
   },
   {
-    path: '/icons',
-    title: 'Icons',
-    icon: 'icon-atom',
-    class: ''
-  },
-  {
-    path: '/maps',
-    title: 'Maps',
-    icon: 'icon-pin',
+    path: '/slots',
+    title: 'Parking Slots',
+    icon: 'icon-delivery-fast',
     class: ''
   },
   {
@@ -32,25 +26,30 @@ export const ROUTES: RouteInfo[] = [
     icon: 'icon-bell-55',
     class: ''
   },
-
+  {
+    path: '/vehicles',
+    title: 'Manage Vehicles',
+    icon: 'icon-align-left-2',
+    class: ''
+  },
   {
     path: '/user',
-    title: 'User Profile',
+    title: 'Profile',
     icon: 'icon-single-02',
     class: ''
   },
   {
-    path: '/tables',
-    title: 'Table List',
-    icon: 'icon-puzzle-10',
+    path: '/settings',
+    title: 'Settings',
+    icon: 'icon-settings-gear-63',
     class: ''
   },
   {
-    path: '/typography',
-    title: 'Typography',
-    icon: 'icon-align-center',
+    path: '/close',
+    title: 'Close App',
+    icon: 'icon-button-power',
     class: ''
-  }
+  },
 ];
 
 @Component({
