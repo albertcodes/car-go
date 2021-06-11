@@ -110,7 +110,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
       display: inline-block;
     }
 
-    .tim-icons{
+    .theme-icons{
       color: $white;
     }
 
@@ -156,13 +156,13 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     }
 
     .datepicker{
-      thead th, table thead th,.tim-icons{
+      thead th, table thead th,.theme-icons{
         color: $primary;
       }
 
     }
 
-    .picker-switch .tim-icons{
+    .picker-switch .theme-icons{
       color: $primary;
     }
   }

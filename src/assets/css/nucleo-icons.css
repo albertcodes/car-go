@@ -1,11 +1,3 @@
-/* --------------------------------
-
-Nucleo Outline Web Font - nucleoapp.com/
-License - nucleoapp.com/license/
-Created using IcoMoon - icomoon.io
-
--------------------------------- */
-
 @font-face {
   font-family: 'Nucleo';
   src: url('../fonts/nucleo.eot');
@@ -14,11 +6,7 @@ Created using IcoMoon - icomoon.io
   font-style: normal;
 }
 
-/*------------------------
-	base class definition
--------------------------*/
-
-.tim-icons {
+.theme-icons {
   display: inline-block;
   font: normal normal normal 1em/1 'Nucleo';
   vertical-align: middle;
@@ -29,46 +17,88 @@ Created using IcoMoon - icomoon.io
   -moz-osx-font-smoothing: grayscale;
 }
 
-.font-icon-detail {
-  text-align: center;
-  padding: 45px 0 30px;
-  border: 1px solid #e44cc4;
-  border-radius: .1875rem;
-  margin: 15px 0;
-  min-height: 168px;
-}
+  .font-icon-occupied {
+    text-align: center;
+    padding: 45px 0 30px;
+    border: 4px solid #e44cc4;
+    border-radius: 1.875rem;
+    margin: 15px 0;
+    min-height: 168px;
+  }
 
-.font-icon-detail i {
-  color: #FFFFFF;
-  font-size: 1.5em;
-}
+  .font-icon-occupied i {
+    color: #FFFFFF;
+    font-size: 1.5em;
+  }
 
-.font-icon-detail p {
-  color: #e44cc4 !important;
-  margin-top: 30px;
-  padding: 0 10px;
-  font-size: .7142em;
-}
+  .font-icon-occupied p {
+    color: #e44cc4 !important;
+    margin-top: 30px;
+    padding: 0 10px;
+    font-size: .7142em;
+  }
+
+  .font-icon-available {
+    text-align: center;
+    padding: 45px 0 30px;
+    border: 4px solid #0081fa;
+    border-radius: 1.875rem;
+    margin: 15px 0;
+    min-height: 168px;
+  }
+
+  .font-icon-available i {
+    color: #FFFFFF;
+    font-size: 1.5em;
+  }
+
+  .font-icon-available p {
+    color: #0081fa !important;
+    margin-top: 30px;
+    padding: 0 10px;
+    font-size: .7142em;
+  }
+
+  .font-icon-reserved {
+    text-align: center;
+    padding: 45px 0 30px;
+    border: 4px solid #00fa96;
+    border-radius: 1.875rem;
+    margin: 15px 0;
+    min-height: 168px;
+  }
+
+  .font-icon-reserved i {
+    color: #FFFFFF;
+    font-size: 1.5em;
+  }
+
+  .font-icon-reserved p {
+    color: #00fa96 !important;
+    margin-top: 30px;
+    padding: 0 10px;
+    font-size: .7142em;
+  }
 
 /*------------------------
   change icon size
 -------------------------*/
 
-.tim-icons-sm {
+.theme-icons-sm {
   font-size: 0.8em;
 }
 
-.tim-icons-lg {
+.theme-icons-lg {
   font-size: 1.2em;
 }
 
 /* absolute units */
 
-.tim-icons-16 {
+.theme-icons-16 {
   font-size: 16px;
 }
 
-.tim-icons-32 {
+.theme-icons-32 {
   font-size: 32px;
 }
 
@@ -76,12 +106,12 @@ Created using IcoMoon - icomoon.io
   add a square/circle background
 -----------------------------------*/
 
-.tim-icons-bg-square,
-.tim-icons-bg-circle {
+.theme-icons-bg-square,
+.theme-icons-bg-circle {
   padding: 0.35em;
 }
 
-.tim-icons-bg-circle {
+.theme-icons-bg-circle {
   border-radius: 50%;
 }
 
@@ -93,13 +123,13 @@ Created using IcoMoon - icomoon.io
   spinning icons
 -------------------------*/
 
-.tim-icons-is-spinning {
-  -webkit-animation: tim-icons-spin 2s infinite linear;
-  -moz-animation: tim-icons-spin 2s infinite linear;
-  animation: tim-icons-spin 2s infinite linear;
+.theme-icons-is-spinning {
+  -webkit-animation: theme-icons-spin 2s infinite linear;
+  -moz-animation: theme-icons-spin 2s infinite linear;
+  animation: theme-icons-spin 2s infinite linear;
 }
 
-@-webkit-keyframes tim-icons-spin {
+@-webkit-keyframes theme-icons-spin {
   0% {
     -webkit-transform: rotate(0deg);
   }
@@ -108,7 +138,7 @@ Created using IcoMoon - icomoon.io
   }
 }
 
-@-moz-keyframes tim-icons-spin {
+@-moz-keyframes theme-icons-spin {
   0% {
     -moz-transform: rotate(0deg);
   }
@@ -117,7 +147,7 @@ Created using IcoMoon - icomoon.io
   }
 }
 
-@keyframes tim-icons-spin {
+@keyframes theme-icons-spin {
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);

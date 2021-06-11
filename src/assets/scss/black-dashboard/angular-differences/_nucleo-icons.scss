@@ -1,6 +1,18 @@
-.font-icon-list .font-icon-detail{
-  border: 1px solid #fd5d93;
+.font-icon-list .font-icon-availble{
+  border: 4px solid #0081fa;
+  p{
+    color: #0081fa !important;
+  }
+}
+.font-icon-list .font-icon-occupied{
+  border: 4px solid #fd5d93;
   p{
     color: #fd5d93 !important;
+  }
+}
+.font-icon-list .font-icon-reserved{
+  border: 4px solid #00fa96;
+  p{
+    color: #00fa96 !important;
   }
 }

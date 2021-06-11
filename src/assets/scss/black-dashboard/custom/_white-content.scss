@@ -45,7 +45,15 @@
     color: $black-states;
   }
 
-  .font-icon-detail i{
+  .font-icon-available i{
+    color: $black;
+  }
+
+  .font-icon-occupied i{
+    color: $black;
+  }
+
+  .font-icon-reserved i{
     color: $black;
   }
 
