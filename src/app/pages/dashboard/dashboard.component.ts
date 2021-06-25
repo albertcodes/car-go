@@ -44,10 +44,11 @@ export class DashboardComponent implements OnInit {
             zeroLineColor: 'transparent',
           },
           ticks: {
-            suggestedMin: 60,
-            suggestedMax: 125,
+            suggestedMin: 0,
+            suggestedMax: 100,
             padding: 20,
-            fontColor: '#2380f7'
+            fontColor: '#2380f7',
+            display: false
           }
         }],
 
@@ -92,10 +93,11 @@ export class DashboardComponent implements OnInit {
             zeroLineColor: 'transparent',
           },
           ticks: {
-            suggestedMin: 60,
-            suggestedMax: 125,
+            suggestedMin: 0,
+            suggestedMax: 100,
             padding: 20,
-            fontColor: '#9a9a9a'
+            fontColor: '#9a9a9a',
+            display: false
           }
         }],
 
@@ -140,10 +142,11 @@ export class DashboardComponent implements OnInit {
             zeroLineColor: 'transparent',
           },
           ticks: {
-            suggestedMin: 60,
-            suggestedMax: 125,
+            suggestedMin: 0,
+            suggestedMax: 100,
             padding: 20,
-            fontColor: '#9a9a9a'
+            fontColor: '#9a9a9a',
+            display: false
           }
         }],
 
@@ -188,10 +191,11 @@ export class DashboardComponent implements OnInit {
             zeroLineColor: 'transparent',
           },
           ticks: {
-            suggestedMin: 50,
-            suggestedMax: 110,
+            suggestedMin: 0,
+            suggestedMax: 100,
             padding: 20,
-            fontColor: '#ff8a76'
+            fontColor: '#ff8a76',
+            display: false
           }
         }],
 
@@ -236,10 +240,11 @@ export class DashboardComponent implements OnInit {
             zeroLineColor: 'transparent',
           },
           ticks: {
-            suggestedMin: 50,
-            suggestedMax: 125,
+            suggestedMin: 0,
+            suggestedMax: 100000,
             padding: 20,
-            fontColor: '#9e9e9e'
+            fontColor: '#9e9e9e',
+            display: false
           }
         }],
 
@@ -285,10 +290,11 @@ export class DashboardComponent implements OnInit {
             zeroLineColor: 'transparent',
           },
           ticks: {
-            suggestedMin: 60,
-            suggestedMax: 120,
+            suggestedMin: 0,
+            suggestedMax: 30,
             padding: 20,
-            fontColor: '#9e9e9e'
+            fontColor: '#9e9e9e',
+            display: false
           }
         }],
 
@@ -307,19 +313,19 @@ export class DashboardComponent implements OnInit {
       }
     };
 
-    this.canvas = document.getElementById('chartLineRed');
+    this.canvas = document.getElementById('inventoryChart');
     this.ctx = this.canvas.getContext('2d');
 
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
     gradientStroke.addColorStop(1, 'rgba(233,32,16,0.2)');
     gradientStroke.addColorStop(0.4, 'rgba(233,32,16,0.0)');
-    gradientStroke.addColorStop(0, 'rgba(233,32,16,0)'); //red colors
+    gradientStroke.addColorStop(0, 'rgba(233,32,16,0)');
 
     var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
       datasets: [{
-        label: 'Data',
+        label: 'Usage (%)',
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#ec250d',
@@ -333,7 +339,7 @@ export class DashboardComponent implements OnInit {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 80],
+        data: [53, 44, 26, 30, 61, 19],
       }]
     };
 
@@ -344,20 +350,20 @@ export class DashboardComponent implements OnInit {
     });
 
 
-    this.canvas = document.getElementById('chartLineGreen');
+    this.canvas = document.getElementById('earningsChart');
     this.ctx = this.canvas.getContext('2d');
 
 
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
     gradientStroke.addColorStop(1, 'rgba(66,134,121,0.15)');
-    gradientStroke.addColorStop(0.4, 'rgba(66,134,121,0.0)'); // green colors
-    gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); // green colors
+    gradientStroke.addColorStop(0.4, 'rgba(66,134,121,0.0)');
+    gradientStroke.addColorStop(0, 'rgba(66,134,121,0)');
 
     var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+      labels: ['WEEK 1', 'WEEK 2', 'WEEK 3', 'WEEK 4'],
       datasets: [{
-        label: 'My First dataset',
+        label: 'Weekly (KES.)',
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#00d6b4',
@@ -371,7 +377,7 @@ export class DashboardComponent implements OnInit {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [90, 27, 60, 12, 80],
+        data: [63200, 48700, 61900, 54300],
       }]
     };
 
@@ -382,18 +388,6 @@ export class DashboardComponent implements OnInit {
 
     });
 
-
-
-    var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    this.datasets = [
-      [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
-      [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
-      [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130]
-    ];
-    this.data = this.datasets[0];
-
-
-
     this.canvas = document.getElementById('chartBig1');
     this.ctx = this.canvas.getContext('2d');
 
@@ -401,42 +395,15 @@ export class DashboardComponent implements OnInit {
 
     gradientStroke.addColorStop(1, 'rgba(233,32,16,0.2)');
     gradientStroke.addColorStop(0.4, 'rgba(233,32,16,0.0)');
-    gradientStroke.addColorStop(0, 'rgba(233,32,16,0)'); // red colors
+    gradientStroke.addColorStop(0, 'rgba(233,32,16,0)');
 
-    var config = {
-      type: 'line',
-      data: {
-        labels: chart_labels,
-        datasets: [{
-          label: 'My First dataset',
-          fill: true,
-          backgroundColor: gradientStroke,
-          borderColor: '#ec250d',
-          borderWidth: 2,
-          borderDash: [],
-          borderDashOffset: 0.0,
-          pointBackgroundColor: '#ec250d',
-          pointBorderColor: 'rgba(255,255,255,0)',
-          pointHoverBackgroundColor: '#ec250d',
-          pointBorderWidth: 20,
-          pointHoverRadius: 4,
-          pointHoverBorderWidth: 15,
-          pointRadius: 4,
-          data: this.data,
-        }]
-      },
-      options: gradientChartOptionsConfigurationWithTooltipRed
-    };
-    this.myChartData = new Chart(this.ctx, config);
-
-
-    this.canvas = document.getElementById('CountryChart');
+    this.canvas = document.getElementById('parkingChart');
     this.ctx  = this.canvas.getContext('2d');
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
     gradientStroke.addColorStop(1, 'rgba(29,140,248,0.2)');
     gradientStroke.addColorStop(0.4, 'rgba(29,140,248,0.0)');
-    gradientStroke.addColorStop(0, 'rgba(29,140,248,0)'); // blue colors
+    gradientStroke.addColorStop(0, 'rgba(29,140,248,0)');
 
 
     var myChart = new Chart(this.ctx, {
@@ -446,9 +413,9 @@ export class DashboardComponent implements OnInit {
         display: false
       },
       data: {
-        labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+        labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
         datasets: [{
-          label: 'Countries',
+          label: 'Cars parked this day',
           fill: true,
           backgroundColor: gradientStroke,
           hoverBackgroundColor: gradientStroke,
@@ -456,15 +423,11 @@ export class DashboardComponent implements OnInit {
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [53, 20, 10, 80, 100, 45],
+          data: [27, 18, 9, 13, 23, 7],
         }]
       },
       options: gradientBarChartConfiguration
     });
 
-  }
-  public updateOptions() {
-    this.myChartData.data.datasets[0].data = this.data;
-    this.myChartData.update();
   }
 }
