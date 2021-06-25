@@ -8,4 +8,7 @@ export class SettingsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  public updateOptions() {
+  }
 }
