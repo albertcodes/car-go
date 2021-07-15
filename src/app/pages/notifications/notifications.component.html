@@ -1,180 +1,87 @@
 <div class=" content">
+  <div class=" card card-chart">
+    <div class=" card-header">
+      <div class=" row">
+        <div class=" col-sm-6 text-left">
+          <h2 class=" card-title">Notifications</h2>
+          <!-- Notification types: Primary, Info, Success, Danger & Warning. -->
+        </div>
+        <div class=" col-sm-6">
+          <div class=" btn-group btn-group-toggle float-right" data-toggle="buttons">
+            <label class=" btn btn-sm btn-danger btn-simple" (click)="showNotification('top', 'right')"
+              [ngClass]="{'active':clicked===true}">
+              <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                All
+              </span>
+              <span class=" d-block d-sm-none">
+                <i class=" theme-icons icon-single-02"> </i>
+              </span>
+            </label>
+            <label class=" btn btn-sm btn-danger btn-simple"
+              (click)="showNotification('top', 'right')"
+              [ngClass]="{'active':clicked1===true}">
+              <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                Recent
+              </span>
+              <span class=" d-block d-sm-none">
+                <i class=" theme-icons icon-gift-2"> </i>
+              </span>
+            </label>
+            <label class=" btn btn-sm btn-danger btn-simple"
+            (click)="showNotification('top', 'right')"
+              [ngClass]="{'active':clicked2===true}">
+              <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                Previous
+              </span>
+              <span class=" d-block d-sm-none">
+                <i class=" theme-icons icon-tap-02"> </i>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class=" row">
-    <div class=" col-md-6">
-      <div class=" card">
-        <div class=" card-header">
-          <h4 class=" card-title">Notifications Style</h4>
-        </div>
-        <div class=" card-body">
-          <ngb-alert [type]="'info'" [dismissible]="false">
-            <span> This is a plain notification </span>
-          </ngb-alert>
-          <ngb-alert [type]="'info'" *ngIf="!staticAlertClosed" [dismissible]="false">
-            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed = true">
-              <i class="theme-icons icon-simple-remove"></i>
-            </button>
-            <span> This is a notification with close button. </span>
-          </ngb-alert>
-          <ngb-alert
-            class=" alert-with-icon"
-            data-notify="container"
-            [type]="'info'"*ngIf="!staticAlertClosed1" [dismissible]="false">
-              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed1 = true">
-                <i class="theme-icons icon-simple-remove"></i>
-              </button>
-            <span class=" theme-icons icon-bell-55" data-notify="icon">
-            </span>
-            <span data-notify="message">
-              This is a notification with close button and icon.
-            </span>
-          </ngb-alert>
-          <ngb-alert
-            class=" alert-with-icon"
-            data-notify="container"
-            [type]="'info'"
-            *ngIf="!staticAlertClosed2" [dismissible]="false">
-              <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed2 = true">
-                <i class="theme-icons icon-simple-remove"></i>
-              </button>
-            <span class=" theme-icons icon-bell-55" data-notify="icon">
-            </span>
-            <span data-notify="message">
-              This is a notification with close button and icon and have
-              many lines. You can see that the icon and the close button
-              are always vertically aligned. This is a beautiful
-              notification. So you don't have to worry about the style.
-            </span>
-          </ngb-alert>
-        </div>
-      </div>
-    </div>
-    <div class=" col-md-6">
-      <div class=" card">
-        <div class=" card-header">
-          <h4 class=" card-title">Notification states</h4>
-        </div>
-        <div class=" card-body">
-          <ngb-alert [type]="'primary'" *ngIf="!staticAlertClosed3" [dismissible]="false">
-            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed3 = true">
-              <i class="theme-icons icon-simple-remove"></i>
-            </button>
-            <span>
-              <b> Primary - </b> This is a regular notification made
-              with ".alert-primary"
-            </span>
-          </ngb-alert>
-          <ngb-alert [type]="'info'" *ngIf="!staticAlertClosed4" [dismissible]="false">
-            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed4 = true">
-              <i class="theme-icons icon-simple-remove"></i>
-            </button>
-            <span>
-              <b> Info - </b> This is a regular notification made with
-              ".alert-info"
-            </span>
-          </ngb-alert>
-          <ngb-alert [type]="'success'" *ngIf="!staticAlertClosed5" [dismissible]="false">
-            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed5 = true">
-              <i class="theme-icons icon-simple-remove"></i>
-            </button>
-            <span>
-              <b> Success - </b> This is a regular notification made
-              with ".alert-success"
-            </span>
-          </ngb-alert>
-          <ngb-alert [type]="'warning'" *ngIf="!staticAlertClosed6" [dismissible]="false">
-            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed6 = true">
-              <i class="theme-icons icon-simple-remove"></i>
-            </button>
-            <span>
-              <b> Warning - </b> This is a regular notification made
-              with ".alert-warning"
-            </span>
-          </ngb-alert>
-          <ngb-alert [type]="'danger'" *ngIf="!staticAlertClosed7" [dismissible]="false">
-            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close" (click)="staticAlertClosed7 = true">
-              <i class="theme-icons icon-simple-remove"></i>
-            </button>
-            <span>
-              <b> Danger - </b> This is a regular notification made with
-              ".alert-danger"
-            </span>
-          </ngb-alert>
-        </div>
-      </div>
-    </div>
     <div class=" col-md-12">
       <div class=" card">
         <div class=" card-body">
-          <div class=" places-buttons">
-            <div class=" row">
-              <div class=" col-md-6 ml-auto mr-auto text-center">
-                <h4 class=" card-title">Notifications Places</h4>
-                <p class=" category">Click to view notifications</p>
-              </div>
-            </div>
-            <div class=" row">
-              <div class=" col-lg-8 ml-auto mr-auto">
-                <div class=" row">
-                  <div class=" col-md-4">
-                    <button
-                      class=" btn btn-danger btn-block"
-                      (click)="showNotification('top', 'left')"
-                    >
-                      Top Left
-                    </button>
-                  </div>
-                  <div class=" col-md-4">
-                    <button
-                      class=" btn btn-danger btn-block"
-                      (click)="showNotification('top', 'center')"
-                    >
-                      Top Center
-                    </button>
-                  </div>
-                  <div class=" col-md-4">
-                    <button
-                      class=" btn btn-danger btn-block"
-                      (click)="showNotification('top', 'right')"
-                    >
-                      Top Right
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class=" row">
-              <div class=" col-lg-8 ml-auto mr-auto">
-                <div class=" row">
-                  <div class=" col-md-4">
-                    <button
-                      class=" btn btn-danger btn-block"
-                      (click)="showNotification('bottom', 'left')"
-                    >
-                      Bottom Left
-                    </button>
-                  </div>
-                  <div class=" col-md-4">
-                    <button
-                      class=" btn btn-danger btn-block"
-                      (click)="
-                        showNotification('bottom', 'center')
-                      "
-                    >
-                      Bottom Center
-                    </button>
-                  </div>
-                  <div class=" col-md-4">
-                    <button
-                      class=" btn btn-danger btn-block"
-                      (click)="showNotification('bottom', 'right')"
-                    >
-                      Bottom Right
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ngb-alert class=" alert-with-icon col-md-8" data-notify="container" [type]="'success'"
+            *ngIf="!staticAlertClosed1" [dismissible]="false">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close"
+              (click)="staticAlertClosed1 = true">
+              <i class="theme-icons icon-simple-remove"></i>
+            </button>
+            <span class=" theme-icons icon-bell-55" data-notify="icon">
+            </span>
+            <span data-notify="message">
+              PSN 021 has been successfully reserved
+            </span>
+          </ngb-alert>
+          <ngb-alert class=" alert-with-icon col-md-8" data-notify="container" [type]="'info'"
+            *ngIf="!staticAlertClosed1" [dismissible]="false">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close"
+              (click)="staticAlertClosed1 = true">
+              <i class="theme-icons icon-simple-remove"></i>
+            </button>
+            <span class=" theme-icons icon-bell-55" data-notify="icon">
+            </span>
+            <span data-notify="message">
+              You have 4 new tasks
+            </span>
+          </ngb-alert>
+          <ngb-alert class=" alert-with-icon col-md-8" data-notify="container" [type]="'primary'"
+            *ngIf="!staticAlertClosed1" [dismissible]="false">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close"
+              (click)="staticAlertClosed1 = true">
+              <i class="theme-icons icon-simple-remove"></i>
+            </button>
+            <span class=" theme-icons icon-bell-55" data-notify="icon">
+            </span>
+            <span data-notify="message">
+              Your profile was updated a while ago
+            </span>
+          </ngb-alert>
         </div>
       </div>
     </div>
