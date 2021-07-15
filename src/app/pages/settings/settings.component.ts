@@ -1,14 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-settings',
   templateUrl: 'settings.component.html'
 })
 export class SettingsComponent implements OnInit {
-  constructor() {}
+  staticAlertClosed  = false;
+  staticAlertClosed1 = false;
+  staticAlertClosed2 = false;
+  staticAlertClosed3 = false;
+  staticAlertClosed4 = false;
+  staticAlertClosed5 = false;
+  staticAlertClosed6 = false;
+  staticAlertClosed7 = false;
+
+  constructor(private toastr: ToastrService) {}
 
   ngOnInit() {}
 
-  public updateOptions() {
+  public updateOptions(from, align) {
+    this.toastr.info('<span class="theme-icons icon-bell-55" [data-notify]="icon"></span>Settings category changed.', 'Notification from Car-Go', {
+      disableTimeOut: false,
+      closeButton: true,
+      enableHtml: true,
+      toastClass: 'alert alert-info alert-with-icon',
+      positionClass: 'toast-' + from + '-' +  align
+    });
   }
 }
