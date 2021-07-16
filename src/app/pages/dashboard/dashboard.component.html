@@ -47,25 +47,17 @@
     <div class=" col-lg-6 col-md-12">
       <div class=" card card-tasks">
         <div class=" card-header">
-          <h6 class=" title d-inline">Tasks(5)</h6>
+          <h6 class=" title d-inline">Tasks</h6>
           <p class=" card-category d-inline">today</p>
           <div ngbDropdown>
-            <button
-              class=" btn btn-link btn-icon"
-              data-toggle="dropdown"
-              ngbDropdownToggle
-              type="button"
-            >
+            <button class=" btn btn-link btn-icon" data-toggle="dropdown" ngbDropdownToggle type="button">
               <i class=" theme-icons icon-settings-gear-63"> </i>
             </button>
-            <div
-              aria-labelledby="dropdownMenuLink"
-              class=" dropdown-menu-right"
-              ngbDropdownMenu
-            >
-              <a href="javascript:void(0)" ngbDropdownItem> Action </a>
-              <a href="javascript:void(0)" ngbDropdownItem> Another action </a>
-              <a href="javascript:void(0)" ngbDropdownItem> Something else </a>
+            <div aria-labelledby="dropdownMenuLink" class=" dropdown-menu-right" ngbDropdownMenu>
+              <a href="javascript:void(0)" ngbDropdownItem> Mark selected as done </a>
+              <a href="javascript:void(0)" ngbDropdownItem> Mark all as done </a>
+              <a href="javascript:void(0)" ngbDropdownItem> Clear selection </a>
+              <a href="javascript:void(0)" ngbDropdownItem> Clear all </a>
             </div>
           </div>
         </div>
@@ -77,11 +69,7 @@
                   <td>
                     <div class=" form-check">
                       <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
+                        <input class=" form-check-input" type="checkbox" value="" />
 
                         <span class=" form-check-sign">
                           <span class=" check"> </span>
@@ -90,13 +78,14 @@
                     </div>
                   </td>
                   <td>
-                    <p class=" title">Update the Documentation</p>
+                    <p class=" title">Manage reserved lots</p>
                     <p class=" text-muted">
-                      Dwuamish Head, Seattle, WA 8:47 AM
+                      Check issued reverved lots. If payment due... list as available lot, Today
                     </p>
                   </td>
                   <td class=" td-actions text-right">
-                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task" container="body" >
+                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task"
+                      container="body">
                       <i class=" theme-icons icon-pencil"> </i>
                     </button>
                   </td>
@@ -105,12 +94,7 @@
                   <td>
                     <div class=" form-check">
                       <label class=" form-check-label">
-                        <input
-                          checked=""
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
+                        <input checked="" class=" form-check-input" type="checkbox" value="" />
 
                         <span class=" form-check-sign">
                           <span class=" check"> </span>
@@ -119,15 +103,15 @@
                     </div>
                   </td>
                   <td>
-                    <p class=" title">GDPR Compliance</p>
+                    <p class=" title">Sample data</p>
                     <p class=" text-muted">
-                      The GDPR is a regulation that requires businesses to
-                      protect the personal data and privacy of Europe citizens
-                      for transactions that occur within EU member states.
+                      Generate sample data for vehicles parked at different times of the day. This is to provide an
+                      insight on the busiest times of the day.
                     </p>
                   </td>
                   <td class=" td-actions text-right">
-                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task" container="body" >
+                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task"
+                      container="body">
                       <i class=" theme-icons icon-pencil"> </i>
                     </button>
                   </td>
@@ -136,11 +120,7 @@
                   <td>
                     <div class=" form-check">
                       <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
+                        <input class=" form-check-input" type="checkbox" value="" />
 
                         <span class=" form-check-sign">
                           <span class=" check"> </span>
@@ -149,14 +129,15 @@
                     </div>
                   </td>
                   <td>
-                    <p class=" title">Solve the issues</p>
+                    <p class=" title">Distribute questionaires</p>
                     <p class=" text-muted">
-                      Fifty percent of all respondents said they would be more
-                      likely to shop at a company
+                      Offer customers a questionaire to gauge what percentage of customers would be more likely to use or
+                      recommend services offered by the system.
                     </p>
                   </td>
                   <td class=" td-actions text-right">
-                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task" container="body" >
+                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task"
+                      container="body">
                       <i class=" theme-icons icon-pencil"> </i>
                     </button>
                   </td>
@@ -165,11 +146,7 @@
                   <td>
                     <div class=" form-check">
                       <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
+                        <input class=" form-check-input" type="checkbox" value="" />
 
                         <span class=" form-check-sign">
                           <span class=" check"> </span>
@@ -178,13 +155,14 @@
                     </div>
                   </td>
                   <td>
-                    <p class=" title">Release v2.0.0</p>
+                    <p class=" title">System review</p>
                     <p class=" text-muted">
-                      Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM
+                      Provide a detailed review on the functionality the system provides. (v1.0.0)
                     </p>
                   </td>
                   <td class=" td-actions text-right">
-                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task" container="body"  >
+                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task"
+                      container="body">
                       <i class=" theme-icons icon-pencil"> </i>
                     </button>
                   </td>
@@ -193,11 +171,7 @@
                   <td>
                     <div class=" form-check">
                       <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
+                        <input class=" form-check-input" type="checkbox" value="" />
 
                         <span class=" form-check-sign">
                           <span class=" check"> </span>
@@ -206,43 +180,15 @@
                     </div>
                   </td>
                   <td>
-                    <p class=" title">Export the processed files</p>
+                    <p class=" title">New software version</p>
                     <p class=" text-muted">
-                      The report also shows that consumers will not easily
-                      forgive a company once a breach exposing their personal
-                      data occurs.
+                      Explicitly state features missing in current version to be incoorporated with next release.
+                      (v2.0.0)
                     </p>
                   </td>
                   <td class=" td-actions text-right">
-                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task" container="body" >
-                      <i class=" theme-icons icon-pencil"> </i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class=" form-check">
-                      <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-
-                        <span class=" form-check-sign">
-                          <span class=" check"> </span>
-                        </span>
-                      </label>
-                    </div>
-                  </td>
-                  <td>
-                    <p class=" title">Arival at export process</p>
-                    <p class=" text-muted">
-                      Capitol Hill, Seattle, WA 12:34 AM
-                    </p>
-                  </td>
-                  <td class=" td-actions text-right">
-                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task" container="body" >
+                    <button class=" btn btn-link" type="button" placement="left" ngbTooltip="Edit Task"
+                      container="body">
                       <i class=" theme-icons icon-pencil"> </i>
                     </button>
                   </td>
@@ -256,61 +202,61 @@
     <div class=" col-lg-6 col-md-12">
       <div class=" card">
         <div class=" card-header">
-          <h4 class=" card-title">Simple Table</h4>
+          <h4 class=" card-title">Generated sample data</h4>
         </div>
         <div class=" card-body">
           <div class=" table-responsive">
             <table class=" table tablesorter" id="">
               <thead class=" text-primary">
                 <tr>
-                  <th>Name</th>
-                  <th>Country</th>
-                  <th>City</th>
-                  <th class=" text-center">Salary</th>
+                  <th>Time</th>
+                  <th>Plate No.</th>
+                  <th>Customer type</th>
+                  <th class=" text-center">Violations</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Dakota Rice</td>
-                  <td>Niger</td>
-                  <td>Oud-Turnhout</td>
-                  <td class=" text-center">$36,738</td>
+                  <td>4:06 PM</td>
+                  <td>KBG 4****</td>
+                  <td>Returning</td>
+                  <td class=" text-center">Null</td>
                 </tr>
                 <tr>
-                  <td>Minerva Hooper</td>
-                  <td>CuraÃ§ao</td>
-                  <td>Sinaai-Waas</td>
-                  <td class=" text-center">$23,789</td>
+                  <td>8:31 AM</td>
+                  <td>KCA 9****</td>
+                  <td>New</td>
+                  <td class=" text-center">Null</td>
                 </tr>
                 <tr>
-                  <td>Sage Rodriguez</td>
-                  <td>Netherlands</td>
-                  <td>Baileux</td>
-                  <td class=" text-center">$56,142</td>
+                  <td>10:01 AM</td>
+                  <td>KBB 7****</td>
+                  <td>Member</td>
+                  <td class=" text-center">Null</td>
                 </tr>
                 <tr>
-                  <td>Philip Chaney</td>
-                  <td>Korea, South</td>
-                  <td>Overland Park</td>
-                  <td class=" text-center">$38,735</td>
+                  <td>1:59 PM</td>
+                  <td>KBY 6****</td>
+                  <td>Member</td>
+                  <td class=" text-center">Null</td>
                 </tr>
                 <tr>
-                  <td>Doris Greene</td>
-                  <td>Malawi</td>
-                  <td>Feldkirchen in KÃ¤rnten</td>
-                  <td class=" text-center">$63,542</td>
+                  <td>7:45 AM</td>
+                  <td>KAZ 8****</td>
+                  <td>New</td>
+                  <td class=" text-center">Null</td>
                 </tr>
                 <tr>
-                  <td>Mason Porter</td>
-                  <td>Chile</td>
-                  <td>Gloucester</td>
-                  <td class=" text-center">$78,615</td>
+                  <td>5:17 PM</td>
+                  <td>KCB 0****</td>
+                  <td>Member</td>
+                  <td class=" text-center">Null</td>
                 </tr>
                 <tr>
-                  <td>Jon Porter</td>
-                  <td>Portugal</td>
-                  <td>Gloucester</td>
-                  <td class=" text-center">$98,615</td>
+                  <td>9:26 AM</td>
+                  <td>KBP 4****</td>
+                  <td>Member</td>
+                  <td class=" text-center">Null</td>
                 </tr>
               </tbody>
             </table>
